@@ -107,6 +107,7 @@ Perl.
 - CSS analyzer is still not applied to style elements, only style attributes.
 - Should upgrade from TagSoup to HTMLCleaner to get HTML5
 - Should offer both blacklist and whitelist configurations for pipeline.
+- Should upgrade build and test system to modern standards.
 
 
 ## Warranty
