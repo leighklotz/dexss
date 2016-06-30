@@ -1,8 +1,9 @@
 # DeXSS -- Java program for removing JavaScript from HTML
 
 Dynamic web sites which allow users to enter text content
-containing HTML are at risk for so-called *cross-site scripting* attacks ((Wikipedia)[http://en.wikipedia.org/wiki/Cross_Site_Scripting]),
-(Securitydocs)[http://www.securitydocs.com/library/3472] attacks.
+containing HTML are at risk for so-called *cross-site scripting* attacks
+([Wikipedia](http://en.wikipedia.org/wiki/Cross_Site_Scripting)),
+[Securitydocs](http://www.securitydocs.com/library/3472)[attacks.
 
 A common approach taken to mitigate this risk is to allow
 some HTML content, but block content that is potentially
@@ -11,15 +12,15 @@ content is that HTML parsing in browsers differs from the ideal,
 and nefarious individuals can take advantage of these differences
 to obscure content.
 
-DeXSS uses (TagSoup)[http://tagsoup.info], an
+DeXSS uses [TagSoup](http://tagsoup.info)) an
 open-source HTML parser that attempts to mimic how web browsers
-work. TagSoup reads wild HTML and generates (SAX2)[http://www.saxproject.org] events. DeXSS invokes
+work. TagSoup reads wild HTML and generates [SAX2](http://www.saxproject.org)events. DeXSS invokes
 TagSoup and follows it with a pipeline of SAX2 filters to remove HTML
 tags such as <code>script</code> and attribute values containing such
 scripts.
 
 ## Download
-See also [DeXSS](https://dexss.org).
+See also [DeXSS](https://dexss.org)
 
 ## Status
 DeXSS 1.2 is an Alpha release.  You should be aware of the following issues:
