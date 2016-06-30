@@ -1,0 +1,6 @@
+<SPAN datasrc="#xml" datafld="XML2" dataformatas="html"></SPAN>
+<XML id="xml"><XML1><XML2>
+  <![CDATA[<]]>SCRIPT<![CDATA[>]]>
+    alert();  
+  <![CDATA[<]]>/SCRIPT<![CDATA[>]]>
+</XML2></XML1></XML>

@@ -1,0 +1,2 @@
+<div style="text-size: 'expression(alert(3))'">test</div>
+

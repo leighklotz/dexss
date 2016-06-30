@@ -1,0 +1,2 @@
+<div style="color:red" xmlns="http://www.w3.org/1999/xhtml">should be ok</div>
+

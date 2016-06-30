@@ -1,0 +1,4 @@
+<META http-equiv="refresh" content="0;url=javascript:alert();">
+<IMG width="0" height="0" src="javascript:alert();">
+<LINK rel="stylesheet" href="javascript:alert();">
+<IFRAME width="0" height="0" src="javascript:alert();"></IFRAME>

@@ -1,0 +1,7 @@
+<STYLE type="text/css">
+  @import url(javascript:alert());
+  body { background: url(javascript:alert()); }
+  body { width: expression(alert());
+ }</STYLE>
+<IMG width="0" height="0" style="width: expression(alert());">
+<IMG width="0" height="0" style="background: url(javascript:alert());">

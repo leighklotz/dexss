@@ -1,0 +1,2 @@
+<IMG width="0" height="0" onerror="alert();" src="::">
+<IMG width="0" height="0" onload="alert();" src="foo.gif">

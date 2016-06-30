@@ -1,0 +1,98 @@
+<!--
+ Copyright 2005, 2006, 2007, 2012 Xerox Corporation
+ Copyright 2012 Leigh L. Klotz, Jr. http://dexss.org
+
+ This software is licensed under Version 3.0 of the Academic Free License.
+ 
+ This is free software; see the source for copying conditions.
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+
+ Portions of this file build.xml were derived from TagSoup http://tagsoup.info Copyright (c) 2005 John Cowan
+ licensed under AFL.
+-->
+<project name="dexss" default="dist">
+
+  <!-- generic properties -->
+  <property file="etc/build/build.properties"/>
+  <!-- additional tasks -->
+  <taskdef file="etc/build/taskdefs.txt" classpath="bin"/>
+
+  <!-- some folder settings -->
+  <property name="bin" value="bin"/>
+  <property name="src" value="src"/>
+  <property name="build" value="build"/>
+  <property name="dist"  value="dist"/>
+  <property name="docs" value="docs"/>
+
+  <!-- initialize project -->
+  <target name="init" description="Init project.">
+    <tstamp/>
+  </target>
+
+
+  <!-- ensure needed folders are available -->
+  <target name="prepare" description="Set up folders.">
+    <mkdir dir="${build}"/>
+  </target>
+
+  <!-- Build a distribution jar file -->
+  <target name="dist" depends="init,compile,docs-api"
+          description="Build a binary distribution file.">
+    <antcall target="jar-release">
+      <param name="buildDir" value="build"/>
+      <param name="version" value="${dexss.version}"/>
+    </antcall>
+  </target>
+
+
+  <target name="jar-release" depends="init"
+          description="Build a release jar file.">
+    <mkdir dir="${dist}/lib" />
+    <jar jarfile="${dist}/lib/dexss-${dexss.version}.jar" basedir="${buildDir}">
+      <manifest>
+        <attribute name="Version" value="${dexss.version}"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <path id="project.class.path">
+    <pathelement location="${tagsoup.jar}" />
+    <pathelement location="${osbcp-css-parser.jar}" />
+  </path>
+
+  <!-- compile java sources -->
+  <target name="compile" depends="init,prepare"
+          description="Compile java classes.">
+
+    <javac srcdir="${src}/java" destdir="${build}" deprecation="on" debug="true" 
+           classpathref="project.class.path"
+           includeantruntime="false">
+      <compilerarg value="-Xlint"/>
+      <src path="${src}/java"/>
+    </javac>
+  </target>
+
+
+  <!-- clean up the mess -->
+  <target name="clean" description="Clean up folders.">
+    <delete dir="${build}"/>
+    <delete dir="${docs}"/>
+    <delete dir="${dist}"/>
+  </target>
+
+
+  <!-- generate javadoc for the java classes -->
+  <target name="docs-api" depends="init"
+          description="Generate javadoc documentation.">
+    <mkdir dir="${docs}/api"/>
+    <javadoc packagenames="org.dexss,org.dexss.filters"
+             sourcepath="${src}/java" destdir="${docs}/api"
+             use="true"
+             windowtitle="DeXSS ${dexss.version} API">
+      <doctitle><![CDATA[<h1>DeXSS Package Documentation</h1>]]></doctitle>
+    </javadoc>
+  </target>
+
+</project>
