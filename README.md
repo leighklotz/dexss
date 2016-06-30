@@ -12,15 +12,15 @@ content is that HTML parsing in browsers differs from the ideal,
 and nefarious individuals can take advantage of these differences
 to obscure content.
 
-DeXSS uses [TagSoup](http://tagsoup.info)) an
+DeXSS uses [TagSoup](http://tagsoup.info) an
 open-source HTML parser that attempts to mimic how web browsers
-work. TagSoup reads wild HTML and generates [SAX2](http://www.saxproject.org)events. DeXSS invokes
+work. TagSoup reads wild HTML and generates [SAX2](http://www.saxproject.org) events. DeXSS invokes
 TagSoup and follows it with a pipeline of SAX2 filters to remove HTML
 tags such as <code>script</code> and attribute values containing such
 scripts.
 
 ## Download
-See also [DeXSS](https://dexss.org)
+See also [https://dexss.org](https://dexss.org)
 
 ## Status
 DeXSS 1.2 is an Alpha release.  You should be aware of the following issues:
@@ -38,32 +38,32 @@ If you have an interest in working on these issues, please consider contributing
 DeXSS includes the following classes for direct use:
 
 
-- <a href="blob/master/docs/api/org/dexss/Test.html">Test</a>, a command-line utility for testing XSS
+- <a href="docs/api/org/dexss/Test.html">Test</a>, a command-line utility for testing XSS
 removal.
 
-- <a href="blob/master/docs/api/org/dexss/DeXSS.html">DeXSS</a>, which implements a string-to-string
+- <a href="docs/api/org/dexss/DeXSS.html">DeXSS</a>, which implements a string-to-string
 conversion of HTML, with XSS removal.
 
-- <a href="blob/master/docs/api/org/dexss/DeXSSParser.html">DeXSSParser</a>, which can be used directly as a SAX2 parser to
+- <a href="docs/api/org/dexss/DeXSSParser.html">DeXSSParser</a>, which can be used directly as a SAX2 parser to
 produce SAX2 events from an input stream.
 
-- <a href="blob/master/docs/api/org/dexss/DeXSSFilterPipeline.html">DeXSSFilterPipeline</a>, which can be used as a SAX2 filter if you have already used TagSoup to produce SAX2 events
+- <a href="docs/api/org/dexss/DeXSSFilterPipeline.html">DeXSSFilterPipeline</a>, which can be used as a SAX2 filter if you have already used TagSoup to produce SAX2 events
 
 	
 ## Documentation
 
-- <a href="blob/master/LICENSE-2.0">LICENSE</a>
-- <a href="blob/master/README.txt">README.txt</a>
-- <a href="blob/master/CHANGES">CHANGES</a>
-- <a href="blob/master/docs/api">JavaDoc</a>
+- <a href="LICENSE-2.0">LICENSE</a>
+- <a href="README.txt">README.txt</a>
+- <a href="CHANGES">CHANGES</a>
+- <a href="docs/api">JavaDoc</a>
 
 
 ## Download
 <h3>Current Version</h3>
 
-- <a href="blob/master/.jar">dexss-1.2.jar</a>
-- <a href="blob/master/dexss-1.2-src.zip">dexss-1.2-src.zip</a>
-- <a href="blob/master/dexss-1.2-docs.zip">dexss-1.2-docs.zip</a>
+- <a href=".jar">dexss-1.2.jar</a>
+- <a href="dexss-1.2-src.zip">dexss-1.2-src.zip</a>
+- <a href="dexss-1.2-docs.zip">dexss-1.2-docs.zip</a>
 
 
 ## How to build
