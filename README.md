@@ -18,6 +18,9 @@ TagSoup and follows it with a pipeline of SAX2 filters to remove HTML
 tags such as <code>script</code> and attribute values containing such
 scripts.
 
+## Download
+See also [DeXSS](https://dexss.org).
+
 ## Status
 DeXSS 1.2 is an Alpha release.  You should be aware of the following issues:
 
