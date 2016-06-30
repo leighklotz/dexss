@@ -2,8 +2,8 @@
 
 Dynamic web sites which allow users to enter text content
 containing HTML are at risk for so-called *cross-site scripting* attacks
-([Wikipedia](http://en.wikipedia.org/wiki/Cross_Site_Scripting)),
-[Securitydocs](http://www.securitydocs.com/library/3472)[attacks.
+([Wikipedia](http://en.wikipedia.org/wiki/Cross_Site_Scripting),
+[Securitydocs](http://www.securitydocs.com/library/3472)) attacks.
 
 A common approach taken to mitigate this risk is to allow
 some HTML content, but block content that is potentially
