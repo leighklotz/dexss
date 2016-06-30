@@ -61,7 +61,7 @@ produce SAX2 events from an input stream.
 ## Download
 <h3>Current Version</h3>
 
-- <a href=".jar">dexss-1.2.jar</a>
+- <a href="dexss-1.2.jar">dexss-1.2.jar</a>
 - <a href="dexss-1.2-src.zip">dexss-1.2-src.zip</a>
 - <a href="dexss-1.2-docs.zip">dexss-1.2-docs.zip</a>
 
